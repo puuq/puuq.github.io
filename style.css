@@ -3,7 +3,42 @@
     margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+/*scroll to top button*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+  
+  .scroll-to-top a {
+    display: inline-block;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .scroll-to-top a:hover {
+    background-color: #333;
+  }
+  
+  /* Show button when user scrolls down */
+  @media screen and (min-width: 768px) {
+    .scroll-to-top {
+      display: none;
+    }
+    
+    .scroll-to-top.visible {
+      display: block;
+    }
+  }
+/*scroll to top button end*/
+
 .hero{
     height: 100vh;
     width: 100%;
