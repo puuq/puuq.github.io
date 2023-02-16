@@ -7,36 +7,29 @@
 }
 
 /*scroll to top button*/
-.scroll-to-top {
+#scroll-to-top-button {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 8px 13px; 
+    border-radius: 20px;
+    transition: transform .4s;
   }
+#scroll-to-top-button:hover{
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}
   
-  .scroll-to-top a {
-    display: inline-block;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50%;
-  }
-  
-  .scroll-to-top a:hover {
-    background-color: #333;
-  }
-  
-  /* Show button when user scrolls down */
-  @media screen and (min-width: 768px) {
-    .scroll-to-top {
-      display: none;
-    }
-    
-    .scroll-to-top.visible {
-      display: block;
-    }
-  }
 /*scroll to top button end*/
 
 .hero{
