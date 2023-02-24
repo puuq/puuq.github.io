@@ -91,6 +91,18 @@ nav ul li a:hover{
     left: 8%;
     transform: translateY(-50%);
 }
+.cursor {
+    display: inline-block;
+    width: 0.5em; /* Adjust the width as needed */
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
 h1.name{
     color: white;
     margin: 20px 0px 20px;
