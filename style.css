@@ -10,8 +10,8 @@
 #scroll-to-top-button {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1rem;
+    right: 1rem;
     font-size: 20px;
     border: none;
     cursor: pointer;
@@ -23,6 +23,7 @@
     padding: 8px 13px; 
     border-radius: 20px;
     transition: transform .4s;
+    z-index: 100;
   }
 #scroll-to-top-button:hover{
   background-color: transparent;
@@ -212,8 +213,8 @@ button:hover{
 .title h2{
     color: white;
     font-size: 75px;
-    width: 1130px;
-    margin: 30px auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 .box{
@@ -267,7 +268,8 @@ h5{
 }
 .contact-me{
     width: 100%;
-    height: 290px;
+    height: auto;
+    padding: 5rem;
     background: #101010;
     display: flex;
     align-items: center;
@@ -298,8 +300,9 @@ h5{
 footer{
     position: relative;
     width: 100%;
-    height: 400px;
-    background: #101010;
+    height: auto;
+    padding: 2rem;
+    background: #191919;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -310,6 +313,7 @@ footer p:nth-child(1){
     color: white;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: center;
 }
 footer p:nth-child(2){
     font-size: 17px;
@@ -456,5 +460,111 @@ footer p:nth-child(2){
 .backtext p{
     font-size: larger;
     font-weight: bold;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    html{
+        zoom: 0.6;
+    }
+    /* Navigation */
+    nav {
+        padding: 20px;
+    }
+    .logo {
+        font-size: 25px;
+    }
+    nav ul li {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .content {
+        left: 5%;
+    }
+    h1.name {
+        font-size: 40px;
+    }
+    h3.do {
+        font-size: 18px;
+    }
+    .about img {
+        width: 70%;
+    }
+    .about-text {
+        width: 100%;
+        text-align: center;
+        margin: 2rem;
+    }
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .title h2 {
+        font-size: 40px;
+    }
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 60%;
+        margin: 15px 0;
+    }
+    .flip {
+        width: 90%;
+    }
+    .flip .front,
+    .flip .back {
+        padding: 2em;
+        
+    }
+    footer p:nth-child(1) {
+        font-size: 25px;
+    }
+    footer p:nth-child(2) {
+        font-size: 14px;
+    }
+    .social a {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+    .colleges{
+        gap: 1rem;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 480px) {
+    .content {
+        left: 3%;
+    }
+    .about-text h2 {
+        font-size: 30px;
+    }
+    .about-text h5 {
+        font-size: 18px;
+    }
+    .about-text p {
+        font-size: 16px;
+    }
+    .title h2 {
+        font-size: 30px;
+    }
+    .card {
+        width: 90%;
+    }
+    footer p:nth-child(1) {
+        font-size: 20px;
+    }
+    footer p:nth-child(2) {
+        font-size: 12px;
+    }
+    .social a {
+        width: 35px;
+        height: 35px;
+        margin: 8px;
+    }
 }
 
