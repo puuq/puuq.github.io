@@ -464,6 +464,10 @@ footer p:nth-child(2){
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
+    .hero{
+        background-size: cover;
+        background-position: 70%;
+    }
     html{
         zoom: 0.6;
     }
@@ -532,6 +536,9 @@ footer p:nth-child(2){
     }
     .colleges{
         gap: 1rem;
+    }
+    .main img{
+        padding: 1rem;
     }
 }
 
