@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects</title>
+
+    <style>
+        :root {
+    --body-color: rgb(0, 0, 0);
+    --font-family: "Inter", Source Code Pro;
+    --font-color: rgb(255, 255, 255);
+  
+    --timing: 600ms;
+    --jump-height: 30px;
+  
+    --dot-width: 30px;
+    --dot-height: 30px;
+    --dot-1-color: rgb(255, 180, 180);
+    --dot-2-color: rgb(255, 129, 129);
+    --dot-3-color: rgb(255, 85, 85);
+    --dot-4-color: rgb(255, 0, 0);
+  }
+  
+  * {
+    -webkit-tap-highretro-color: transparent;
+  }
+  
+  *:focus {
+    outline: none;
+  }
+
+  body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/lbg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .loading {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-text {
+    position: relative;
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+    filter: drop-shadow(0px 20px 2.5px rgba(245, 232, 232, 0.3));
+  }
+  
+  .loading-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .dot-1,
+  .dot-2,
+  .dot-3,
+  .dot-4 {
+    position: relative;
+    content: "";
+    height: var(--dot-height);
+    width: var(--dot-width);
+    border-radius: 50%;
+    animation: jumping-dots 2s cubic-bezier(0.55, 1.55, 0.55, 1.55) infinite;
+    filter: drop-shadow(0px 0px 10px rgba(119, 72, 115, 0.521))
+      drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.3));
+    transition: var(--timing);
+  }
+  
+  .dot-1::before,
+  .dot-2::before,
+  .dot-3::before,
+  .dot-4::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  
+  .dot-1 {
+    background-color: var(--dot-1-color);
+  }
+  
+  .dot-2 {
+    background-color: var(--dot-2-color);
+    animation-delay: 0.25s;
+  }
+  
+  .dot-3 {
+    background-color: var(--dot-3-color);
+    animation-delay: 0.5s;
+  }
+  
+  .dot-4 {
+    background-color: var(--dot-4-color);
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes jumping-dots {
+    0%,
+    50%,
+    75%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(calc(var(--jump-height) * -1));
+    }
+  }
+
+  .fade-out {
+            animation: fadeOut 1s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-dots">
+            <div class="dot-1"></div>
+            <div class="dot-2"></div>
+            <div class="dot-3"></div>
+            <div class="dot-4"></div>
+        </div>
+    
+      <p class="loading-text">PROJECTS</p>
+    </div>
+    
+      <!-- script -->
+      <script>
+            function waveLoadingEffect() {
+    var baseText = "P";
+    var waveText = "ROJECTS";
+    var element = document.querySelector(".loading-text");
+    var text = baseText + waveText;
+    var i = 0;
+    var forward = true;
+    var duration = 5000;
+
+    function updateText() {
+        if (forward) {
+            if (i < text.length) {
+                element.textContent = text.substring(0, i + 1);
+                i++;
+            } else {
+                forward = false;
+                i--;
+            }
+        } else {
+            if (i >= baseText.length) {
+                element.textContent = text.substring(0, i);
+                i--;
+            } else {
+                forward = true;
+                i++;
+            }
+        }
+    }
+
+    setInterval(updateText, 350);
+}
+
+waveLoadingEffect();
+
+document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                // Fade out loading elements
+                var loading = document.querySelector('.loading');
+                loading.classList.add('fade-out');
+                
+                // After fade out, redirect to another page
+                setTimeout(function() {
+                    // Redirect to a different page
+                    window.location.href = "your_other_page.html";
+                }, 1000); // 1 second delay for fade out
+            }, 5000); // 5 seconds delay
+        });
+
+        
+      </script>
+</body>
+</html>
