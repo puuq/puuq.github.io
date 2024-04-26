@@ -150,8 +150,8 @@
     </div>
     
       <!-- script -->
-      <script>
-            function waveLoadingEffect() {
+<script>
+  function waveLoadingEffect() {
     var baseText = "P";
     var waveText = "ROJECTS";
     var element = document.querySelector(".loading-text");
@@ -161,45 +161,44 @@
     var duration = 5000;
 
     function updateText() {
-        if (forward) {
-            if (i < text.length) {
-                element.textContent = text.substring(0, i + 1);
-                i++;
-            } else {
-                forward = false;
-                i--;
-            }
+      if (forward) {
+        if (i < text.length) {
+          element.textContent = text.substring(0, i + 1);
+          i++;
         } else {
-            if (i >= baseText.length) {
-                element.textContent = text.substring(0, i);
-                i--;
-            } else {
-                forward = true;
-                i++;
-            }
+          forward = false;
+          i--;
         }
+      } else {
+        if (i >= baseText.length) {
+          element.textContent = text.substring(0, i);
+          i--;
+        } else {
+          forward = true;
+          i++;
+        }
+      }
     }
 
     setInterval(updateText, 350);
-}
+  }
 
-waveLoadingEffect();
+  waveLoadingEffect();
 
-document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                // Fade out loading elements
-                var loading = document.querySelector('.loading');
-                loading.classList.add('fade-out');
-                
-                // After fade out, redirect to another page
-                setTimeout(function() {
-                    // Redirect to a different page
-                    window.location.href = "your_other_page.html";
-                }, 1000); // 1 second delay for fade out
-            }, 5000); // 5 seconds delay
-        });
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      // Fade out loading elements
+      var loading = document.querySelector('.loading');
+      loading.classList.add('fade-out');
 
-        
-      </script>
+      // After fade out, redirect to another page
+      setTimeout(function () {
+        // Redirect to a different page
+        window.location.href = "works.html";
+      }, 1000); // 1 second delay for fade out
+    }, 3000); // 3 seconds delay
+  });
+</script>
+
 </body>
 </html>
