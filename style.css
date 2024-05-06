@@ -226,7 +226,7 @@ button:hover{
     min-height: 400px;
 }
 .card{
-    height: 365px;
+    height: 350px;
     width: 335px;
     padding: 20px 35px;
     background: #191919;
@@ -298,6 +298,43 @@ h5{
     background-color: transparent;
     border: 2px solid #f9004d;
     cursor: pointer;
+}
+.projects{
+    background-color: #191919;
+        width: 100%;
+            padding: 1rem 0;
+}
+.boxp{
+            display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 400px;
+}
+.cardp {
+    height: 450px;
+    width: 500px;
+    padding: 20px 35px;
+    background: #000000;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cardp img{
+    width: 100%;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin-top: 0.7rem;
+}
+.cardp h5{
+    padding-top: 0.5rem;
+    color: rgb(255, 255, 235);
+}
+.cardp a{
+    text-decoration: none;
+    color: rgb(255, 255, 235);
 }
 footer{
     position: relative;
