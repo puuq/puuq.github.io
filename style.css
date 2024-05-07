@@ -587,6 +587,10 @@ footer p:nth-child(2){
     .main img{
         padding: 1rem;
     }
+                .colleges {
+                    align-items: center;
+                    margin-left: 1.5rem;
+                }
 }
 
 /* Adjustments for smaller screens */
@@ -616,6 +620,13 @@ footer p:nth-child(2){
         width: 35px;
         height: 35px;
         margin: 8px;
+    }
+    .education{
+        align-content: center;
+    }
+    .colleges{
+        align-items: center ;
+        margin-left: 1.5rem;
     }
 }
 
