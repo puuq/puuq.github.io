@@ -513,7 +513,10 @@ footer p:nth-child(2){
     }
     /* Navigation */
     nav {
-        padding: 20px;
+        padding: 3rem;
+    }
+    nav ul{
+        display: none;
     }
     .logo {
         font-size: 25px;
@@ -524,7 +527,7 @@ footer p:nth-child(2){
         text-align: center;
     }
     .content {
-        left: 5%;
+        padding-left: 3remm;
     }
     h1.name {
         font-size: 40px;
@@ -588,9 +591,6 @@ footer p:nth-child(2){
 
 /* Adjustments for smaller screens */
 @media only screen and (max-width: 480px) {
-    .content {
-        left: 3%;
-    }
     .about-text h2 {
         font-size: 30px;
     }
