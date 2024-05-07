@@ -547,13 +547,17 @@ footer p:nth-child(2){
     .title h2 {
         font-size: 40px;
     }
-    .box {
+    .box , .boxp{
         flex-direction: column;
         align-items: center;
     }
     .card {
         width: 60%;
         margin: 15px 0;
+    }
+    .cardp{
+        width: 80%;
+        height: 100%;
     }
     .flip {
         width: 90%;
